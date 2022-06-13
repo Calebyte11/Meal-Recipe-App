@@ -1,0 +1,386 @@
+*{
+    margin: 0%;
+    padding: 0px;
+}
+.body_container{
+    /* padding-left: 0.1rem;
+    padding-right: 0.1rem; */
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    inset: 0px 0px 0px 0px;
+    overflow-x: hidden;
+    list-style: none;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 425px;
+    min-width: 425px;
+    height: max-content;
+    background-color: white;
+    font-family: cursive;
+    color: rgb(105, 93, 93);
+}
+.body_container.hidden{
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+}
+.body_container::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
+}
+
+/* ===========HEADER SECTION============= */
+.container_header{
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: white;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 9px 7px 0 rgba(32, 33, 36, .28);
+}
+.search_search{
+    border-radius: 15px;
+    border: 1px solid gray;
+    overflow: hidden;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 30px;
+    padding: 2px;
+    outline: none;
+    background-color: rgb(153 151  151 / 24%);
+}
+input[type=search]{
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow-x: hidden;
+}
+.search_btn{
+    margin-right: 15px;
+    border: none;
+    font-size: 22px;
+    width: 30px;
+    background-color: transparent;
+}
+
+
+/* ================FAVOURITES MEALS SECTION============= */
+.fav_meals_container{
+    z-index: 999;
+    margin-top: 75px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    padding-bottom: 1px;
+    width: 90%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to right, hsl(225deg 97% 50% / 41%), hsl(318deg 81% 75% / 85%));
+    border-radius: 10px;
+    box-shadow: 0 9px 7px 0 rgb(32 33 36 / 28%);
+}
+.favorite_meals{
+    overflow-x: hidden;
+    position: absolute;
+    top: 90px;
+    background-color: white;
+    width: 170px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bolder;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+    padding: 0px 15px;
+    color: rgb(105, 93, 93);
+}
+.fav_meals{
+    overflow-x: auto;
+    overflow-y: hidden;
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    /* gap: 5px; */
+    justify-content: flex-start;
+    margin-right: 20px;
+    margin-left: 20px;
+    color: black;
+    text-align: center;
+    align-items: stretch;
+}
+.fav_meals::-webkit-scrollbar{
+    width: 0px;
+}
+.fav_meals_text{
+    display: inline-block;
+    white-space: nowrap;
+    /* text-align: center; */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 90px;
+}
+.images_list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    padding: 20px 10px;
+    padding-bottom: 20px;
+    cursor: pointer;
+    position: relative;
+}
+.images_list:hover{
+    background-color: hsl(0deg 0% 100% / 20%);
+}
+.fav_images{
+    box-sizing: border-box;
+    border: 2px solid white;
+    background-color: black;
+    width: 83px;
+    aspect-ratio: 1;
+    border-radius: 45px;
+}
+.clear_btn{
+    width: fit-content;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+    border: none;
+    background-color: transparent;
+    color: rgb(105, 93, 93);
+    font-size: 19px;
+}
+.images_list:hover .clear_btn{
+    opacity: 1;
+    pointer-events: auto;
+}
+.clear_btn:focus {
+    color: rgba(204, 5, 5, 0.774);
+}
+
+
+/* ==============RANDOM MEALS SECTIONS================= */
+.random_meals_container{
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: column;
+    margin-top: 20px;
+    position: relative;
+
+}
+.meals_container{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    width: 90%;
+    min-height: 40%;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 10px;
+    box-shadow: 0 9px 7px 0 rgba(32, 33, 36, .28);
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+}
+.randoms_meal{
+    position: relative;
+    top: 20px;
+    background-color: white;
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bolder;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+    padding: 0px 18px;
+    color: rgb(105, 93, 93);
+}
+.random_image{
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-top: -20px;
+    width: 100%;
+    height: 330px;
+}
+.next_btn{
+    cursor: pointer;
+    padding: 0.7rem;
+    font-size: 85px;
+    width: 55px;
+    display: flex;
+    height: 150px;
+    color: rgb(84, 76, 76);
+    background-color: hsl(225deg 25% 95% / 56%);
+    backdrop-filter: blur(0.1rem);
+    border: none;
+    position: absolute;
+    top: 130px;
+    right: 1.4rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 10px;
+    /* border-top-right-radius: 10px; */
+    border-bottom-left-radius: 10px;
+    /* border-bottom-right-radius: 10px; */
+}
+.next_btn:hover{
+    background-color: white;
+}
+.random_meals_and_button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 15px;
+    border: none;
+}
+.fav_btn{
+    border: none;
+    background-color: transparent;
+    color: rgb(105, 93, 93);
+    font-size: 19px;
+    outline: none;
+}
+.fav_btn.active{
+    outline: none;
+    color: rgb(235, 43, 123);
+    border: none;
+}
+
+/* =========== MEALS INFO POP UP============ */
+.popup_container.hidden{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+    /* scr */
+    padding: 0%;
+    margin: 0%;
+    overflow: hidden;
+}
+.popup_container{
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 99999;
+    opacity: 1;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    font-family: cursive;
+    color: rgb(105, 93, 93);
+    padding-right: 1rem;
+    padding-left: 1rem;
+    scroll-behavior: smooth;
+}
+.popup_container.hidden .popup_info_header{
+    opacity: 0;
+    display: none;
+    position: fixed;
+    pointer-events: none;
+}
+.popup_info_header{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: fit-content;
+    background-color: white;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0 9px 7px 0 rgb(32 33 36 / 28%);
+    /* height: 70px; */
+}
+.meal_info_title{
+    text-align: justify;
+    display: inline-block;
+    white-space: normal;
+    margin-top: 30px;
+    font-size: 23px;
+    font-weight: bolder;
+    padding: 1rem;
+}
+.close_popup{
+    position: absolute;
+    top: 6px;
+    right: 20px;
+    font-size: 32px;
+    font-weight: bolder;
+    background-color: transparent;
+    border: none;
+    color: rgb(36, 34, 34);
+    cursor: pointer;
+    width: 7%;
+}
+.meal_info_body{
+    margin-top: 110px;
+}
+.popup_container img{
+    width: 100%;
+    background-color: white;
+    background-size: cover;
+    box-shadow: rgba(32, 33, 36, .28);
+    border-radius: 4px;
+    aspect-ratio: 1.1;
+    object-fit: cover;
+    margin:  17px auto;
+}
+.popup_container h3{
+    font-size: 18px;
+    font-weight: bolder;
+    text-align: center;
+}
+.popup_container h4{
+    text-align: start;
+    font-size: 21px;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+.popup_container p {
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: justify;
+    list-style: auto;
+    margin-bottom: 20px;
+    padding-bottom: 1rem;
+}
+.popup_container ul{
+    text-align: justify;
+    margin-top: 5px;
+    list-style: auto;
+    font-size: 19px;
+    padding-left: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.popup_container li{
+    padding-top: 0.3rem;
+}
+

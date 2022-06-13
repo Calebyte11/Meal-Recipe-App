@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/Meal_Recipe_App/css/all.min.css">
+    <script src="Recipe.js" defer></script>
+</head>
+<body>
+
+<!-- ================== MEALS INFO POP-UP ================== -->
+    <div id="popup_container" class="popup_container hidden">
+        
+
+    </div>
+
+
+    <!-- =====================  MOBILE CONTAINER  ======================= -->
+    <div class="body_container">
+    
+            <!-- ==========HEADER=================== -->
+        <div class="container_header">
+            <input class="search_search" id="search_area" type="search" autocomplete="off" spellcheck="false" aria-live="polite" autofocus=""placeholder="search">
+            <button id="search_button" style="cursor: pointer;" class="search_btn">
+                <i class="fa-solid fa-search"></i>
+            </button>
+        </div>
+
+        <div id="favourite_meals" class="fav_meals_container">
+            <span class="favorite_meals">FAVOURITE MEALS</span>
+
+            <Ul id="fav_meals_list" class="fav_meals">
+                
+            </Ul>
+            
+        </div>
+    
+            <!-- ==============RANDOM MEALS CONTAINER============= -->
+        <div class="random_meals_container" id="random_meals_container_el" >
+            
+        </div>
+
+
+
+    </div>
+
+</body>
+</html>
