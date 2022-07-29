@@ -190,7 +190,7 @@ searchBtnEl.addEventListener('click', async () => {
 
     if (searchedMeals) {
         searchedMeals.forEach( (searchedMeal)  => {
-            loadRandomMeals(searchedMeal);
+            loadRandomMeals(searchedMeal, random = false);
         });
     }
 
