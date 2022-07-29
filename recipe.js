@@ -20,6 +20,8 @@ async  function getRandomMeals (){
      const randomMeals = respRandomData.meals[0];
      console.log(randomMeals);
 
+     
+     randomMealsContainer.innerHTML ="";
      loadRandomMeals(randomMeals, random = true);
 };
 
@@ -45,7 +47,7 @@ async function getMealsBySearchByTerms(term){
 
 // ===============LOADING RANDOM MEALS================
 
-function loadRandomMeals(mealsData, random = false){
+function loadRandomMeals(mealsData, random = null){
 
     console.log(`Random Meal's Id : ${mealsData.idMeal}`);    
 
@@ -54,7 +56,7 @@ function loadRandomMeals(mealsData, random = false){
     meal.innerHTML = `
 
             ${random ? ` <span class="randoms_meal"> RANDOM MEALS</span>
-            <button class="next_btn" onclick="location.reload()" ><i class="fa-solid fa-angle-right"></i></button>
+            <button class="next_btn" onclick="getRandomMeals()" ><i class="fa-solid fa-angle-right"></i></button>
             ` : ""}
             
             <img src="${mealsData.strMealThumb}" alt="${mealsData.strMeal}" class="random_image">
